@@ -45,3 +45,12 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Eclipse things
+.metadata/
+.settings/
+.project
+.pydevproject
+
+# Some kind of project data
+RemoteSystemsTempFiles/

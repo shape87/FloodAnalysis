@@ -207,6 +207,4 @@ def serve_pil_image(pil_img):
     return send_file(img_io, mimetype='image/jpeg')  
     
 app.secret_key = os.urandom(24)
-
-if __name__ == '__main__':
-    app.run(debug=True)
+app.run()

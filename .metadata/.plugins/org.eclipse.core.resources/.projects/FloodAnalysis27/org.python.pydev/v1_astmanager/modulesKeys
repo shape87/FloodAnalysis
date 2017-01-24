@@ -1,0 +1,8 @@
+MODULES_MANAGER_V2
+Web.cartesian|C:\Users\chogg\Documents\GitHub\FloodAnalysis\FloodAnalysis27\Web\cartesian.py
+Web.flask_app|C:\Users\chogg\Documents\GitHub\FloodAnalysis\FloodAnalysis27\Web\flask_app.py
+Web.flow_calc|C:\Users\chogg\Documents\GitHub\FloodAnalysis\FloodAnalysis27\Web\flow_calc.py
+Web.graphs|C:\Users\chogg\Documents\GitHub\FloodAnalysis\FloodAnalysis27\Web\graphs.py
+Web.manning|C:\Users\chogg\Documents\GitHub\FloodAnalysis\FloodAnalysis27\Web\manning.py
+Web.nwis_request|C:\Users\chogg\Documents\GitHub\FloodAnalysis\FloodAnalysis27\Web\nwis_request.py
+unit_conversion|C:\Users\chogg\Documents\GitHub\FloodAnalysis\FloodAnalysis27\unit_conversion.py

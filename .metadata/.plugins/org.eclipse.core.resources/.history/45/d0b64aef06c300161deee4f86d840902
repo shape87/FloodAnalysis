@@ -1,0 +1,125 @@
+$(function () {
+	
+	//set up jquery datetime picker for query nwis form
+	$('#start_date').datetimepicker();
+	$('#end_date').datetimepicker();
+	
+	//hide upload items if not 
+	if($('#radio2').is(":checked")){
+		$('#manual_calc').show()
+	} else{
+		$('#manual_calc').hide()
+	}
+	
+	$('.radio').change(function(){
+		if($('#radio1').is(":checked")){
+			$('#manual_calc').hide()
+		} else{
+			$('#manual_calc').show()
+		}
+	})
+	
+	$('#get_stage').click(function(){
+		$.ajax({
+			type: 'POST',
+			url: '/get_stage',
+			dataype: 'json',
+			success: function(d){
+				alert(d.height[0]);
+			},
+			error: function(){
+				alert('no dice')
+			}
+		})
+	})
+	
+	$('#query_nwis').submit(function(e){
+		e.preventDefault();
+		
+		if($('#test').valid() == true){ 
+			var formData = new FormData();
+//			formData.append('file', $('#file')[0].files[0]);
+			formData.append('station_id', $('#station_id').val());
+			formData.append('start_date', $('#start_date').val());
+			formData.append('end_date', $('#end_date').val());
+			formData.append('tz', $('#tz').val());
+			formData.append('daylight_savings', $('#daylight_savings').val());
+			
+			$.ajax({
+				type: 'POST',
+				url: '/query_nwis',
+				data: formData,
+		         // Options to tell jQuery not to process data or worry about the content-type
+		        cache: false,
+		        contentType: false,
+		        processData: false,
+				success: function(data){
+					
+					$('#success_message .message').text('');
+					$('#success_message').slideDown();
+					$('#success_message .message').text(data.message);
+					
+					setTimeout(function(){
+						$('#success_message').slideUp();
+						
+					}, 5000)
+					
+				},
+				error: function(){
+					$('#error_message .message').text('');
+					$('#error_message').slideDown();
+					$('#error_message .message').text("Could not query NWIS, check parameters and try again");
+					
+					setTimeout(function(){
+						$('#error_message').slideUp();
+					}, 5000);
+				}
+			})
+		}
+	})
+	
+	$('#read_input').submit(function(e){
+		e.preventDefault();
+		
+		if($('#test').valid() == true){ 
+			var formData = new FormData();
+//			formData.append('file', $('#file')[0].files[0]);
+			formData.append('station_id', $('#station_id').val());
+			formData.append('start_date', $('#start_date').val());
+			formData.append('end_date', $('#end_date').val());
+			formData.append('tz', $('#tz').val());
+			formData.append('daylight_savings', $('#daylight_savings').val());
+			
+			$.ajax({
+				type: 'POST',
+				url: '/query_nwis',
+				data: formData,
+		         // Options to tell jQuery not to process data or worry about the content-type
+		        cache: false,
+		        contentType: false,
+		        processData: false,
+				success: function(data){
+					
+					$('#success_message .message').text('');
+					$('#success_message').slideDown();
+					$('#success_message .message').text(data.message);
+					
+					setTimeout(function(){
+						$('#success_message').slideUp();
+						
+					}, 5000)
+					
+				},
+				error: function(){
+					$('#error_message .message').text('');
+					$('#error_message').slideDown();
+					$('#error_message .message').text("Could not query NWIS, check parameters and try again");
+					
+					setTimeout(function(){
+						$('#error_message').slideUp();
+					}, 5000);
+				}
+			})
+		}
+	})
+})

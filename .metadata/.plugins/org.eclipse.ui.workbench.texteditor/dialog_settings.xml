@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="652" key="DIALOG_X_ORIGIN"/>
+		<item value="362" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="coord_min" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="coord_min"/>
+			<item value="coord"/>
+			<item value="print"/>
+			<item value="                           [np.arange(min_max.[&apos;min_y&apos;], min_maxmax_y, "/>
+			<item value="loading"/>
+			<item value="loding"/>
+			<item value="manning_input"/>
+			<item value="ax2"/>
+		</list>
+		<list key="replacehistory">
+			<item value="ax3"/>
+			<item value="stage"/>
+			<item value="properties"/>
+			<item value="flow_calculator"/>
+			<item value="self.time_series_df"/>
+			<item value="indices"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="305" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="444" key="DIALOG_HEIGHT"/>
+		<item value="1140" key="DIALOG_X_ORIGIN"/>
+		<item value="523" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

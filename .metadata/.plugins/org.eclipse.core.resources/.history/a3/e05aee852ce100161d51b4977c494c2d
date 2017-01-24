@@ -1,0 +1,28 @@
+import Image
+from StringIO import StringIO
+import re
+import pandas as pd
+import requests as rq
+from datetime import datetime as dt
+import numpy as np
+import pytz
+import unit_conversion as uc
+
+
+r = rq.get('https://waterdata.usgs.gov/nwis/measurements?site_no=07010000&agency_cd=USGS&format=rdb_expanded')
+
+match = re.search('\nUSGS\t', r.text)
+match.span()[0]
+
+string_io = StringIO(r.text[match.span()[0]:])
+string_io.seek(0)
+    
+a = pd.read_table(string_io, header=None)
+a[3] = pd.to_datetime(a[3])
+a[3] = []
+
+# idx = np.array(np.abs(a[3] - dt.strptime('2014-01-01', "%Y-%m-%d"))).argmin()
+# print a[4][idx:]
+
+
+
